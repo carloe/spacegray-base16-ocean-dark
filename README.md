@@ -1,6 +1,6 @@
-# base16-ocean-spacegray theme
+# base16-ocean-spacegray-dark theme
 
-A port of the Spacegray base16 Ocean Theme
+A port of the Spacegray base16-ocean-dark Theme
 
 Converted from the [Sublime Text Version](https://github.com/kkga/spacegray)
 
