@@ -1,9 +1,10 @@
-.editor, .editor .gutter {
+.editor, .editor .gutter,
+:host, :host .gutter {
   background-color: #2b303b;
   color: #c0c5ce;
 }
 
-.editor {
+.editor, :host {
   .indent-guide {
     color: rgba(255, 255, 255, 0.1);
   }
@@ -13,19 +14,23 @@
   }
 }
 
-.editor.is-focused .cursor {
+.editor.is-focused .cursor,
+:host(.is-focused) .cursor  {
   border-color: #c0c5ce;
 }
 
-.editor.is-focused .selection .region {
+.editor.is-focused .selection .region,
+:host(.is-focused) .selection .region {
   background-color: #4f5b66;
 }
 
-.editor.is-focused .line-number.cursor-line-no-selection, .editor.is-focused .line.cursor-line {
+.editor.is-focused .line-number.cursor-line-no-selection, .editor.is-focused .line.cursor-line,
+:host(.is-focused) .line-number.cursor-line-no-selection, :host(.is-focused) .line.cursor-line {
   background-color: #343d46;
 }
 
-.editor .invisible-character {
+.editor .invisible-character,
+:host .invisible-character {
   color: rgba(192, 197, 206, 0.3);
 }
 
@@ -205,7 +210,7 @@
   color: #2b303b;
   background-color: #bf616a;
 }
-.tree-view-resizer, .editor {
+.tree-view-resizer, .editor, :host {
   ::-webkit-scrollbar {
     width: 1em;
     height: 1em;
