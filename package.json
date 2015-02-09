@@ -1,7 +1,7 @@
 {
   "name": "base16-ocean-dark-spacegray",
   "theme": "syntax",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "private": true,
   "description": "A port of the Spacegray base16 Ocean Theme",
   "repository": "https://github.com/carloe/spacegray-base16-ocean-dark",
