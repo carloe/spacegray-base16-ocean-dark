@@ -6,7 +6,7 @@ atom-text-editor, atom-text-editor .gutter {
 }
 
 atom-text-editor {
-  .indent-guide {
+  .indent-guide, .keystroke, .settings-view .link {
     color: @syntax-indent-guide-color;
   }
 
@@ -18,6 +18,63 @@ atom-text-editor {
     background-color: @syntax-bracket-matcher-background-color !important;
     border-color: @syntax-bracket-matcher-border-color !important;
   }
+}
+
+.btn {
+  border-color: @light-grey !important;
+  color: @light-grey !important;
+
+  &:hover {
+    color: @syntax-background-color !important;
+    background: @light-grey !important;
+  }
+}
+
+a {
+  color: @syntax-link-color !important;
+  display: inline-block;
+  padding-bottom: 2px;
+  position: relative;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:after {
+    background: transparent;
+    content: '';
+    display: block;
+    height: 1px;
+    margin: auto;
+    transition: width .3s ease, background-color .1s ease;
+    width: 0px;
+  }
+  &:hover:after {
+    background: @syntax-link-color;
+    width: 100%;
+  }
+}
+
+.panels-menu a {
+  color: @light-grey !important;
+  padding-bottom: 0;
+
+  &:hover:after {
+    width: 0;
+  }
+}
+
+.keystroke {
+  background: @syntax-background-color !important;
+  color: @syntax-link-color !important;
+}
+
+.text-info, button {
+  color: @syntax-link-color !important;
+}
+
+input[type="checkbox"]:checked {
+  background: @syntax-link-color !important;
 }
 
 atom-text-editor.is-focused .cursor {
@@ -226,4 +283,12 @@ atom-text-editor .invisible-character {
   ::-webkit-scrollbar-thumb {
     background-color: #232830;
   }
+}
+
+.status-added, .status-added > .list-item, {
+  color: @git-added-color !important;
+}
+
+.status-removed, .status-removed > .list-item, {
+  color: @git-removed-color !important;
 }
